@@ -1,0 +1,46 @@
+[
+  {
+    "type" : "burger",
+    "name" : "Double Decker",
+    "price" : 320,
+    "orderCount" : 0,
+    "img" : "img/items/burger3.png"
+  },
+  {
+    "type" : "pizza",
+    "name" : "Spicy Mushroom Pizza",
+    "price" : 650,
+    "orderCount" : 0,
+    "img" : "img/items/pizza1.png"
+  },
+  {
+    "type" : "burger",
+    "name" : "Cheesy Beef",
+    "price" : 200,
+    "orderCount" : 0,
+    "img" : "img/items/burger1.png"
+  },
+  {
+    "type" : "other",
+    "name" : "Cupcake",
+    "price" : 125,
+    "orderCount" : 0,
+    "img" : "img/items/dessert1.png"
+  },
+  {
+    "type" : "burger",
+    "name" : "Beef Burger",
+    "price" : 250,
+    "orderCount" : 0,
+    "img" : "img/items/burger2.png"
+  },
+  {
+    "type" : "pizza",
+    "name" : "Vegan Pizza",
+    "price" : 750,
+    "orderCount" : 0,
+    "img" : "img/items/pizza2.png"
+  }
+
+
+]

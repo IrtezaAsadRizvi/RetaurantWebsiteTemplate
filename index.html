@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Red Tomatoes</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.0/jquery-migrate.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+  </head>
+  <body>
+
+    <!--LOADER-->
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="tf-menu" class="navbar navbar-default">
+      <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#"><span style="font-weight:700">RED</span><span style="font-weight:300;color:#000">TOMATOES</span></a>
+          </div>
+          <!-- Burger Menu -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- CAROUSEL -->
+    <div class="container">
+      <div id="carousel">
+        <div id="slide1"><img src="img/slide1.png" alt="slide1"></div>
+        <div id="slide2"><img src="img/slide2.png" alt="slide2"></div>
+      </div>
+    </div>
+
+    <!-- ITEMS -->
+    <div class="wrapper" id="menu">
+      <div class="container">
+        <h2 id="title">menu</h2>
+        <!-- FILTER NAV -->
+        <div class="iso-nav">
+          <ul>
+            <li class="active" data-filter="*">All</li>
+            <li data-filter=".burger">burger</li>
+            <li data-filter=".pizza">pizza</li>
+            <li data-filter=".other">other</li>
+          </ul>
+        </div>
+
+        <!-- MENU -->
+        <div class="main-iso row" ng-app="app" ng-controller="item-ctrl">
+          <div  id="item" class="item burger col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/burger1.png" alt="">
+            <div id="item-name">Extra Chicken</div>
+            <div id="item-hover">
+              <div id="item-name">Extra Chicken</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  240 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item pizza col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/pizza1.png" alt="">
+            <div id="item-name">Pepperoni Pizzza</div>
+            <div id="item-hover">
+              <div id="item-name">Pepperoni Pizzza</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  700 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item burger col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/burger2.png" alt="">
+            <div id="item-name">Beef Burger</div>
+            <div id="item-hover">
+              <div id="item-name">Beef Burger</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  180 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item burger col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/burger3.png" alt="">
+            <div id="item-name">Double Decker</div>
+            <div id="item-hover">
+              <div id="item-name">Double Decker</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  350 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item other col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/dessert1.png" alt="">
+            <div id="item-name">Cup Cake</div>
+            <div id="item-hover">
+              <div id="item-name">Cup Cake</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  100 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item pizza col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/pizza2.png" alt="">
+            <div id="item-name">Vegan Pizza</div>
+            <div id="item-hover">
+              <div id="item-name">Vegan Pizza</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  650 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item burger col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/burger4.png" alt="">
+            <div id="item-name">Vegetable Mix</div>
+            <div id="item-hover">
+              <div id="item-name">Vegetable Mix</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  300 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item other col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/dessert2.png" alt="">
+            <div id="item-name">Chocolate Cake</div>
+            <div id="item-hover">
+              <div id="item-name">Chocolate Cake</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  150 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item other col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/dessert3.png" alt="">
+            <div id="item-name">Cold Coffee</div>
+            <div id="item-hover">
+              <div id="item-name">Cold Coffee</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  120 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item other col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/drink1.png" alt="">
+            <div id="item-name">Cokacola</div>
+            <div id="item-hover">
+              <div id="item-name">Cokacola</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  25 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id="item" class="item other col-md-3 col-sm-6">
+            <img id="item-img" src="img/items/drink2.png" alt="">
+            <div id="item-name">Water</div>
+            <div id="item-hover">
+              <div id="item-name">Water</div>
+              <p id="item-des"> Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+              <div id="item-order">
+                <div id="item-price" class="col-md-12">
+                  10 <span>BDT</span>
+                </div>
+                <div class="col-md-12 button">
+                  order item
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- END OF ITEMS -->
+
+    <!-- ABOUT -->
+    <div class="wrapper" id="about">
+      <div class="container">
+        <h2 id="title" style="color:#fff">about</h2>
+        <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in sdsasd dwafafd
+            reprehend in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+             officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="wrapper" id="service">
+      <div class="container">
+        <h2 id="title">Services</h2>
+        <div class="row">
+          <div id="service" class="col-md-4">
+            <i class="fa fa-cutlery" aria-hidden="true"></i>
+            <h3>fast service</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+          </div>
+          <div id="service" class="col-md-4">
+            <i class="fa fa-wifi" aria-hidden="true"></i>
+            <h3>free wifi</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+          </div>
+          <div id="service" class="col-md-4">
+            <i class="fa fa-archive" aria-hidden="true"></i>
+            <h3>Home Delivery</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="wrapper" id="contact">
+      <div class="container" style="max-width:750px">
+        <h2 id="title" style="color:#fff; margin-bottom: 70px">contact</h2>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <textarea type="text" class="form-control" id="msg" rows="8" cols="80" style="resize:none" placeholder="Type in your message"></textarea>
+          </div>
+          <button type="submit" id="form-btn" class="btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <div class="container" class="row">
+        <div class="col-md-4">
+          <a class="navbar-brand logo" href="#"><span style="font-weight:700; font-size:1.5em">RED</span>
+            <span style="font-weight:300;color:#fff; font-size:1.5em">TOMATOES</span></a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

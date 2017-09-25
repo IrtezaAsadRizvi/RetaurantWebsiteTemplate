@@ -1,0 +1,312 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* DEFAULTS */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #D11816;
+}
+
+/*LOADER*/
+.spinner{
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid #D11816;
+    border-top:3px solid #F7F7F7;
+    border-radius: 100%;
+
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    animation: spin 1s  ease-in-out infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background: #D11816;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 1000;
+ }
+
+
+/* NAVBAR */
+#tf-menu {
+	margin-bottom: 0;
+	background: #F7F7F7;
+	border: 0;
+	color: #fff !important;
+	padding: 2% 0;
+	transition: all 0.5s;
+  border-radius: none;
+}
+#sticky {
+    padding: 0.5ex;
+    background-color: #333;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 0.5ex;
+}
+#tf-menu.stick {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background: #222222;
+    padding: 1% 0;
+}
+#tf-menu.navbar-default .navbar-nav > li > a {
+	color: #C5C5C5;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+#tf-menu.navbar-default .navbar-nav > li > a:hover,
+#tf-menu.navbar-default .navbar-nav > li > a:focus {
+	color: #D11816;
+	background-color: transparent;
+}
+a.navbar-brand.logo,a.navbar-brand.logo:hover{
+  color: #D11816;
+  font-size: 1.5em;
+}
+.navbar {
+    border-radius: 0px;
+}
+
+/*CAROUSEL*/
+
+#carousel{
+  text-align: center;
+  margin: 40px 0px 0px 0px;
+  overflow: hidden;
+}
+#slide1,#slide2{
+  text-align: center;
+  outline: none;
+}
+#slide1 img,#slide2 img{
+  max-width: 1000px;
+  width: 100%;
+  transform: scale(0.8);
+  outline: none;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#slide1 img,#slide2 img :hover{
+  overflow: hidden;
+}
+
+/* FILTER NAV */
+.wrapper{
+  width: 100%;
+  text-align: center;;
+  background-color: #F7F7F7;
+  height: auto;
+  padding: 20px 0px;
+}
+.iso-nav{
+  text-align: center;
+  padding-bottom: 40px;
+}
+.iso-nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.iso-nav ul li{
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  color:  #C5C5C5;
+  font-size: 12px;
+  font-weight: 700;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.iso-nav ul li:hover{
+  border-bottom: 2px solid #999;
+}
+.iso-nav ul li.active{
+  color: #222;
+  border-bottom: 2px solid #D11816;
+}
+
+/* ITEMS */
+#menu{
+  padding-bottom: 60px;
+}
+#title{
+  font-family: 'Sedgwick Ave Display', cursive;
+  margin: 20px auto;
+  width: 120px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  padding: 30px;
+}
+#item{
+  padding: 0px 30px 30px 30px;
+  overflow: hidden;
+}
+#item-img{
+  width: 80%;
+  margin: 10px auto;
+}
+#item-name{
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 2em;
+  color: #000;
+}
+#item-des{
+  padding: 20px 20px 20px 0px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+}
+#item-hover{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #000;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in;
+  padding-top: 20px;
+}
+#item:hover #item-hover{
+  transform: translateY(0%);
+}
+#item-hover #item-name{
+  color: #fff;
+}
+#item-order{
+  padding: 20px 0;
+}
+#item-order .button{
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  border: none;
+  font-size: 1em;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px 0px;
+  text-align: center;
+  background-color: #D11816;
+}
+#item-price{
+  font-weight: 600;
+  color: #fff;
+  z-index: 10;
+}
+#item-price span{
+  color: #D11816;
+}
+/*ABOUT*/
+#about{
+  background-color:  #111214;
+  background-image: url('../img/bg.png');
+  background-size: auto;
+}
+#about-text{
+  font-size: 1.2em;
+  padding: 30px;
+  color: #FFF;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*SERVICES*/
+#service i{
+  font-size: 5em;
+  color: #999;
+}
+#service h3{
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+#service p{
+  padding: 10px 30px 30px 20px;
+  color: #666;
+}
+
+/*CONTACT*/
+#contact{
+  background-color:  #111214;
+  background-image: url('../img/bg.png');
+  background-size: auto;
+  padding-bottom: 60px;
+}
+#contact #title{
+  width: 150px;
+}
+.form-control{
+  border: none;
+  border-radius: 0px;
+}
+#form-btn{
+  max-width: 750px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+  font-weight: 500;
+  background-color: #D11816;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+/*FOOTER*/
+footer{
+  margin: 0px;
+  width: 100%;
+  height: 250px;
+  background-color: #111214;
+  -webkit-background-color: #111214;
+  -ms-background-color: #111214;
+  -moz-background-color: #111214;
+  color: #F7F7F7;
+
+}
+footer p{
+  color: #494949;
+}
